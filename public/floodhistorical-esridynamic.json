@@ -1,0 +1,90 @@
+{
+   "theme":"dark",
+   "navBar":[
+      "zoom",
+      "fullscreen",
+      "home"
+   ],
+   "components":[
+      "overview-map",
+      "north-arrow"
+   ],
+   "corePackages":[
+      
+   ],
+   "externalPackages":[
+      
+   ],
+   "suportedLanguages":[
+      "en"
+   ],
+   "map":{
+      "basemapOptions":{
+         "shaded":true,
+         "basemapId":"transport",
+         "labeled":true
+      },
+      "interaction":"dynamic",
+      "listOfGeoviewLayerConfig":[
+         {
+            "geoviewLayerType":"esriDynamic",
+            "listOfLayerEntryConfig":[
+               {
+                  "entryType":"vector-tile",
+                  "initialSettings":{
+                     "opacity":1,
+                     "visible":"yes"
+                  },
+                  "layerId":"0",
+                  "layerName":{
+                     "en":"flood"
+                  },
+                  "schemaTag":"esriDynamic",
+                  "source":{
+                     "dataAccessPath":{
+                        "en":"https://maps-cartes.services.geo.ca/server_serveur/rest/services/NRCan/historical_flood_event_en/MapServer"
+                     },
+                     "featureInfo":{
+                        "customParser":{
+                           "template":{
+                              
+                           }
+                        },
+                        "nameField":{
+                           
+                        },
+                        "outfields":{
+                           
+                        },
+                        "aliasFields":{
+                           
+                        },
+                        "queryable":true
+                     }
+                  },
+                  "style":{
+                     
+                  }
+               }
+            ],
+            "geoviewLayerId":"historical-flood",
+            "geoviewLayerName":{
+               "en":"flood"
+            },
+            "metadataAccessPath":{
+               "en":"https://maps-cartes.services.geo.ca/server_serveur/rest/services/NRCan/historical_flood_event_en/MapServer"
+            }
+         }
+      ],
+      "viewSettings":{
+         "enableRotation":true,
+         "center":[
+            -106,
+            60
+         ],
+         "projection":3857,
+         "rotation":0,
+         "zoom":12
+      }
+   }
+}

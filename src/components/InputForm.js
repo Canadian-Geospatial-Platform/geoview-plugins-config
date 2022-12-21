@@ -2,42 +2,22 @@
  * @author Vijendra Yadav <Vijendra.Yadav@nrcan-rncan.gc.ca >
  */
 
-import {
-  Box,
-  Button,
-  FormControl,
-  FormControlLabel,
-  FormLabel,
-  Radio,
-  RadioGroup,
-  TextField,
-  Typography,
-} from "@material-ui/core";
+import { Box,Button,FormControl,FormControlLabel,FormLabel,Radio,RadioGroup,TextField,Typography} from "@material-ui/core";
 import { Field, Form, Formik } from "formik";
 import { object, string } from "yup";
 import { useNavigate } from "react-router-dom";
+
 //import api from "../api/api";
 
 const initialValues = {
   uuid: "",
   language: "",
   plugin: "",
+  type: "string",
+  format: "data-url",
+   
 };
-/*
-async function getSchema(uuid, language, pluginType) {
-  try {
-    return await api.get("/plugins", {
-      params: {
-        id: uuid,
-        language: language,
-        pluginType: pluginType,
-      },
-    });
-  } catch (error) {
-    console.error(error);
-  }
-}
-*/
+
 
 const InputForm = () => {
   let navigate = useNavigate();
@@ -54,8 +34,11 @@ const InputForm = () => {
           //const schema = getSchema(values.uuid, values.language, values.plugin);
           const jsonString = require("./db.json");
           //const customer = JSON.parse(jsonString);
-          console.log(jsonString.plugins);
+          console.log('json string-',jsonString.plugins);
 
+//          navigate("/plugin", {
+//            state: { data: jsonString.plugins, desiredPlugin: values.plugin },
+//          });
           navigate("/plugin", {
             state: { data: jsonString.plugins, desiredPlugin: values.plugin },
           });
@@ -84,6 +67,7 @@ const InputForm = () => {
               error={Boolean(errors.uuid) && Boolean(touched.uuid)}
               helperText={Boolean(touched.uuid) && errors.uuid}
             />
+            
 
             <Box height={14} />
 
@@ -140,15 +124,22 @@ const InputForm = () => {
                   label="Swiper"
                 />
                 <FormControlLabel
+                  value="thematicslider"
+                  control={<Radio color="info" />}
+                  label="Thematic Slider"
+                />
+                  <FormControlLabel
+                  value="map"
+                  control={<Radio color="info" />}
+                  label="Geoview map"
+                />
+                <FormControlLabel
                   value="Draw Toolbar"
                   control={<Radio color="info" />}
                   label="Draw Toolbar"
                 />
-                <FormControlLabel
-                  value="Thematic Chart"
-                  control={<Radio color="info" />}
-                  label="Thematic Chart"
-                />
+               
+            
               </RadioGroup>
             </FormControl>
             <Box height={14} />
@@ -169,5 +160,7 @@ const InputForm = () => {
     </div>
   );
 };
+
+
 
 export default InputForm;
