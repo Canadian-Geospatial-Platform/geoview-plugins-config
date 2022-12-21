@@ -1,0 +1,34 @@
+{
+  "map": {
+    "interaction": "static",
+    "viewSettings": {
+      "zoom": 4,
+      "center": [-100, 60],
+      "projection": 3857
+    },
+    "basemapOptions": {
+      "basemapId": "transport",
+      "shaded": false,
+      "labeled": true
+    },
+    "listOfGeoviewLayerConfig": [
+      {
+        "geoviewLayerId": "wmsLYR1",
+        "geoviewLayerName": {
+          "en": "Première Nation / First Nation",
+          "fr": "Première Nation / First Nation"
+        },
+        "metadataAccessPath": {
+          "en": "https://services.aadnc-aandc.gc.ca/geomatics/services/Donnees_Ouvertes-Open_Data/Premiere_Nation_First_Nation/MapServer/WMSServer",
+          "fr": "https://services.aadnc-aandc.gc.ca/geomatics/services/Donnees_Ouvertes-Open_Data/Premiere_Nation_First_Nation/MapServer/WMSServer"
+        },
+        "geoviewLayerType": "ogcWms",
+        "listOfLayerEntryConfig": [{ "layerId": "0" }]
+      }
+    ]
+  },
+  "theme": "dark",
+  "components": ["footer-bar"],
+  "corePackages": [],
+  "suportedLanguages": ["en"]
+}
