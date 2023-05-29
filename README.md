@@ -7,6 +7,8 @@ some UUID to test it
 
 [Demo](http://plugin-scema-template-deploybucket-1vj1hgukq0iz4.s3-website.ca-central-1.amazonaws.com/)
 
+[Latest Demo]   (https://pewillia.github.io/GeoView-Plugins-Config/plugin/)
+
 This application is build to get user input and render form using schema and submit configuration to AWS bucket, built with React, JavaScript,REST and CSS.
 
 ## Project Status
