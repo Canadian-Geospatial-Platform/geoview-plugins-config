@@ -1,0 +1,34 @@
+{
+  "map": {
+    "interaction": "static",
+    "viewSettings": {
+      "zoom": 4,
+      "center": [-100, 60],
+      "projection": 3857
+    },
+    "basemapOptions": {
+      "basemapId": "transport",
+      "shaded": false,
+      "labeled": true
+    },
+    "listOfGeoviewLayerConfig": [
+      {
+        "geoviewLayerId": "wmsLYR7",
+        "geoviewLayerName": {
+          "en": "Geomet",
+          "fr": "Geomet"
+        },
+        "metadataAccessPath": {
+          "en": "https://geo.weather.gc.ca/geomet",
+          "fr": "https://geo.weather.gc.ca/geomet"
+        },
+        "geoviewLayerType": "ogcWms",
+        "listOfLayerEntryConfig": [{ "layerId": "RAQDPS-FW.CE_PM2.5-DIFF-YAvg" }]
+      }
+    ]
+  },
+  "theme": "dark",
+  "components": ["footer-bar"],
+  "corePackages": [],
+  "suportedLanguages": ["en"]
+}
